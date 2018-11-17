@@ -1,38 +1,38 @@
 My personal Mint-Y-Colora Themes
 ================================
 
-Build some themes for current vesion of Cinnamon, since Mint-Y-Colora-Theme-Collection repo is outdated.
+Build some themes for current vesion of Cinnamon(3.8.9) included in Linux Mint 19, since both original Mint-Y-Colora-Theme-Collection and Mint-Y-Colora repos are outdated.
 
-Using:
+Used repos:
 
 	https://github.com/linuxmint/mint-themes
-	https://github.com/HattDroid/Mint-Y-Colora-Theme
+	https://github.com/kunesj/Mint-Y-Colora-Theme
 
-Build date: 2018-11-10
+Build date: 2018-11-17
 
-Script fix
-----------
-Script I used left some default colors behind, so I needed to edit "1-change-color.sh" to replace: 
+How to do this yourself
+-----------------------
+
+1. Prepare code and data for theme generation
 ```
-find $SRC_DIR -name "*.*" -type f -exec sed -i 's/'$oldcolour1'/'$newcolour1'/g' {}  \;
-find $SRC_DIR -name "*.*" -type f -exec sed -i 's/'$oldcolour2'/'$newcolour2'/g' {}  \;
-find $SRC_DIR -name "*.*" -type f -exec sed -i 's/'$oldcolour3'/'$newcolour3'/g' {}  \;
-find $SRC_DIR -name "*.*" -type f -exec sed -i 's/'$oldcolour4'/'$newcolour4'/g' {}  \;
-find $SRC_DIR -name "*.*" -type f -exec sed -i 's/'$oldcolour5'/'$newcolour5'/g' {}  \;
-find $SRC_DIR -name "*.*" -type f -exec sed -i 's/'$oldcolour6'/'$newcolour6'/g' {}  \;
-find $SRC_DIR -name "*.*" -type f -exec sed -i 's/'$oldcolour7'/'$newcolour7'/g' {} \;
+git clone https://github.com/linuxmint/mint-themes.git
+git clone https://github.com/kunesj/Mint-Y-Colora-Theme.git
+cp Mint-Y-Colora-Theme/*.sh mint-themes/
+cp Mint-Y-Colora-Theme/*.py mint-themes/
+cd mint-themes/
+./0-install-tools.sh
 ```
-with:
+
+2. Choose theme colors (in `autobuild-themes.py`)
 ```
-find $SRC_DIR -type f -exec sed -i 's/'$oldcolour1'/'$newcolour1'/g' {}  \;
-find $SRC_DIR -type f -exec sed -i 's/'$oldcolour2'/'$newcolour2'/g' {}  \;
-find $SRC_DIR -type f -exec sed -i 's/'$oldcolour3'/'$newcolour3'/g' {}  \;
-find $SRC_DIR -type f -exec sed -i 's/'$oldcolour4'/'$newcolour4'/g' {}  \;
-find $SRC_DIR -type f -exec sed -i 's/'$oldcolour5'/'$newcolour5'/g' {}  \;
-find $SRC_DIR -type f -exec sed -i 's/'$oldcolour6'/'$newcolour6'/g' {}  \;
-find $SRC_DIR -type f -exec sed -i 's/'$oldcolour7'/'$newcolour7'/g' {} \;
+'Numix': {'light': 'd64937', 'dark': 'd64937'},
 ```
-Some colors in xfwm4 are still left as default, but I have no clue why they are not replaced...
+
+3. Generate theme(s)
+```
+./autobuild-themes.py
+```
+Build themes will be put into `~/.themes`
 
 Used colors
 -----------
