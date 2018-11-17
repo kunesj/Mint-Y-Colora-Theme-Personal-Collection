@@ -10,8 +10,21 @@ Used repos:
 
 Build date: 2018-11-17
 
-How to do this yourself
------------------------
+
+Installation
+------------
+
+1. Download this repository
+
+2. Move theme folders to your `~/.themes` folder
+
+    - `~/.themes` folder is a hidden folder
+
+    - Make sure you copy all versions of you choosen theme (normal, dark, darker)
+
+
+How to build themes yourself
+----------------------------
 
 1. Prepare code and data for theme generation
 ```
@@ -23,45 +36,35 @@ cd mint-themes/
 ./0-install-tools.sh
 ```
 
-2. Choose theme colors (in `autobuild-themes.py`)
+2. Define theme colors (in `themes.json`)
 ```
-'Numix': {'light': 'd64937', 'dark': 'd64937'},
+{
+    "Smoke": {"light": "A1A1A1", "dark": "A1A1A1"},
+    "Majestic": {"light": "5F5F5F", "dark": "5F5F5F"}
+}
 ```
+Last line must NOT have `,` at the end!
 
 3. Generate theme(s)
 ```
 ./autobuild-themes.py
 ```
-Build themes will be put into `~/.themes`
+Build themes will be put into `~/.themes` by default
+
+For more details read README in `Mint-Y-Colora-Theme` repo.
+
 
 Used colors
 -----------
-```
-## Monochrome
+Used theme colors are located in file `themes.json`.
 
-Mint-Y-Smoke
-personallightcolour=A1A1A1
-personaldarkcolour=A1A1A1
-
-Mint-Y-Majestic
-personallightcolour=5F5F5F
-personaldarkcolour=5F5F5F
-
-## Numix
-
-Mint-Y-Numix (Correct color version)
-personallightcolour=d64937
-personaldarkcolour=d64937
-
-Mint-Y-Numix-Orange (Mint-Y-Colora-Theme-Collection version)
-personallightcolour=FFA726
-personaldarkcolour=FFA726
-```
-More colors from Mint-Y-Colora-Theme-Collection can be found in it's repo in:
+Most colors are taken from old `Mint-Y-Colora-Theme-Collection`, by looking at these lines:
 ```
 Mint-Y-*/cinnamon/cinnamon.css
 	.cinnamon-link { color: personaldarkcolour }
 	.cinnamon-link:hover { color: personallightcolour }
 ```
 
-
+`Mint-Y-Numix` theme from old `Mint-Y-Colora-Theme-Collection` was renamed to `Mint-Y-Numix-Orange` and replaced by my own version.
+I have done this because it's colors are different from old verson of Numix theme I was using for last 4 years.
+Deal with it.
