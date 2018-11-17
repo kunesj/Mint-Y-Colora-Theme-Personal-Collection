@@ -1,7 +1,7 @@
 My personal Mint-Y-Colora Themes
 ================================
 
-Build some themes for current vesion of Cinnamon(3.8.9) included in Linux Mint 19, since both original Mint-Y-Colora-Theme-Collection and Mint-Y-Colora repos are outdated.
+I build some themes for current version of Cinnamon(3.8.9) included in Linux Mint 19, because both original Mint-Y-Colora-Theme-Collection and Mint-Y-Colora repos are outdated.
 
 Used repos:
 
