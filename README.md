@@ -56,7 +56,7 @@ For more details read README in `Mint-Y-Colora-Theme` repo.
 
 Used colors
 -----------
-Used theme colors are located in file `themes.json`.
+Used theme colors are located in file `themes.json` in my `Mint-Y-Colora-Theme` repo.
 
 Most colors are taken from old `Mint-Y-Colora-Theme-Collection`, by looking at these lines:
 ```
