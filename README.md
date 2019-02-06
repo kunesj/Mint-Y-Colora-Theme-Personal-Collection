@@ -8,7 +8,7 @@ Used repos:
 	https://github.com/linuxmint/mint-themes
 	https://github.com/kunesj/Mint-Y-Colora-Theme
 
-Build date: 2018-11-17
+Build date: 2019-02-06
 
 
 Installation
